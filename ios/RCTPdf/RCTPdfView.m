@@ -61,6 +61,7 @@ const float MIN_SCALE = 1.0f;
         _enableRTL = NO;
         _enableAnnotationRendering = YES;
         _fitPolicy = 2;
+        _fitEachPage = NO;
         _spacing = 10;
         _singlePage = NO;
 
@@ -273,6 +274,10 @@ const float MIN_SCALE = 1.0f;
                 [_pdfView goToDestination:pdfDest];
                 _pdfView.scaleFactor = _fixScaleFactor*_scale;
             }
+        }
+
+        if (_pdfDocument && ([changedProps containsObject:@"path"] || [changedProps containsObject:@"fitEachPage"])) {
+            _pdfView.autoScales = _fitEachPage
         }
 
         _pdfView.backgroundColor = [UIColor clearColor];

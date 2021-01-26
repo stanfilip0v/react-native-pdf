@@ -75,6 +75,7 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
     private boolean pageFling = false;
     private boolean pageSnap = false;
     private FitPolicy fitPolicy = FitPolicy.WIDTH;
+    private boolean fitEachPage = false;
     private boolean singlePage = false;
 
     private static PdfView instance = null;
@@ -234,6 +235,7 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
                 .password(this.password)
                 .enableAntialiasing(this.enableAntialiasing)
                 .pageFitPolicy(this.fitPolicy)
+                .fitEachPage(this.fitEachPage)
                 .pageSnap(this.pageSnap)
                 .autoSpacing(this.autoSpacing)
                 .pageFling(this.pageFling)
@@ -323,6 +325,10 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
             }
         }
 
+    }
+
+    public void setFitEachPage(boolean fitEachPage) {
+        this.fitEachPage = fitEachPage;
     }
 
     public void setSinglePage(boolean singlePage) {

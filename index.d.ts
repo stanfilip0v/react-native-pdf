@@ -33,6 +33,7 @@ interface Props {
     enableRTL?: boolean,
     enableAnnotationRendering?: boolean,
     fitPolicy?: number,
+    fitEachPage?: boolean,
     trustAllCerts?: boolean,
     singlePage?: boolean,
     onLoadProgress?: (percent: number,) => void,

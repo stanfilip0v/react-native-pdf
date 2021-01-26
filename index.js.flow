@@ -38,6 +38,7 @@ export type Props = {
   enablePaging?: boolean,
   enableRTL?: boolean,
   fitPolicy?: FitWidth | FitHeight | FitBoth,
+  fitEachPage?: boolean,
   horizontal?: boolean,
   maxScale?: number,
   minScale?: number,

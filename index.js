@@ -63,6 +63,7 @@ export default class Pdf extends Component {
         enablePaging: PropTypes.bool,
         enableRTL: PropTypes.bool,
         fitPolicy: PropTypes.number,
+        fitEachPage: PropTypes.bool,
         trustAllCerts: PropTypes.bool,
         singlePage: PropTypes.bool,
         onLoadComplete: PropTypes.func,
@@ -89,6 +90,7 @@ export default class Pdf extends Component {
         maxScale: 3,
         spacing: 10,
         fitPolicy: 2, //fit both
+        fitEachPage: false,
         horizontal: false,
         page: 1,
         enableAntialiasing: true,
