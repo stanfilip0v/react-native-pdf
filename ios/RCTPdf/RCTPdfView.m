@@ -277,7 +277,7 @@ const float MIN_SCALE = 1.0f;
         }
 
         if (_pdfDocument && ([changedProps containsObject:@"path"] || [changedProps containsObject:@"fitEachPage"])) {
-            _pdfView.autoScales = _fitEachPage
+            _pdfView.autoScales = _fitEachPage;
         }
 
         _pdfView.backgroundColor = [UIColor clearColor];
